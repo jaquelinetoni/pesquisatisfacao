@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400&display=swap');
+
+
+body {
+    background-image: url("img/imagem.png");
+}
+
+form {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  
+  div {
+    margin: 5px 40px;
+  }
+  
+  label {
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 36px;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: transform 0.2s; 
+  }
+  
+  label:hover {
+    transform: scale(1.1);
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  input[type="radio"] + label {
+    color: #000000;
+  }
+  
+  input[type="radio"]:checked + label {
+    color: #F29124;
+  }
+  
+  
+  button {
+    margin: 7% 40%;
+    background-color: #A90F09;
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #a90e09c0;
+  }
+
+
+  .site {
+    margin: 20% 13%;
+    width: 200px;
+
+  }
+
+  .catalogo {
+    margin: 20% 5%;
+    width: 200px;
+  }
+
+  .resultado {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
