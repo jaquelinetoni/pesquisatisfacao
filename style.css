@@ -48,7 +48,6 @@ form {
     color: #F29124;
   }
   
-  
   button {
     margin: 7% 40%;
     background-color: #A90F09;
@@ -63,9 +62,11 @@ form {
     cursor: pointer;
   }
   
+
   button:hover {
     background-color: orange;
   }
+
 
 
   .site {
@@ -84,3 +85,4 @@ form {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
   }
+

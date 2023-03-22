@@ -32,7 +32,7 @@
           <label for="muito-insatisfeito">&#128542; Muito Insatisfeito</label>
         </div>
         <div>
-          <button type="submit">Concluir</button>
+          <button id="btn-concluir" type="submit">Concluir</button>
         </div>
       </form>
       
@@ -48,7 +48,6 @@
         <p><span id="contagem-insatisfeito">0</span> pessoas estão insatisfeitas.</p>
         <p><span id="contagem-muito-insatisfeito">0</span> pessoas estão muito insatisfeitas.</p>
       </div>
-
 </body>     
 </html>
 
@@ -67,6 +66,7 @@
         switch (selecionado) {
             case 'muito-satisfeito':
                 muitoSatisfeitoContagem.textContent++;
+
                 break;
             case 'satisfeito':
                 satisfeitoContagem.textContent++;
@@ -81,5 +81,20 @@
                 muitoInsatisfeitoContagem.textContent++;
                 break;
 }
+});
+
+  const labels = document.querySelectorAll('label');
+
+  form.addEventListener('submit', function(event) {
+    // ... código existente aqui ...
+    labels.forEach(label => {
+        label.style.color = 'black';
+    });
+});
+
+labels.forEach(label => {
+    label.addEventListener('click', function() {
+        this.style.color = 'orange';
+    });
 });
 </script>
