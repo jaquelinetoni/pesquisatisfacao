@@ -59,6 +59,18 @@
     const insatisfeitoContagem = document.querySelector('#contagem-insatisfeito');
     const muitoInsatisfeitoContagem = document.querySelector('#contagem-muito-insatisfeito');
 
+    const contagemMuitoSatisfeito = localStorage.getItem('contagem-muito-satisfeito') || 0;
+    const contagemSatisfeito = localStorage.getItem('contagem-satisfeito') || 0;
+    const contagemNeutro = localStorage.getItem('contagem-neutro') || 0;
+    const contagemInsatisfeito = localStorage.getItem('contagem-insatisfeito') || 0;
+    const contagemMuitoInsatisfeito = localStorage.getItem('contagem-muito-insatisfeito') || 0;
+
+    muitoSatisfeitoContagem.textContent = contagemMuitoSatisfeito;
+    satisfeitoContagem.textContent = contagemSatisfeito;
+    neutroContagem.textContent = contagemNeutro;
+    insatisfeitoContagem.textContent = contagemInsatisfeito;
+    muitoInsatisfeitoContagem.textContent = contagemMuitoInsatisfeito;
+
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         const selecionado = document.querySelector('input[name="satisfacao"]:checked').value;
@@ -66,19 +78,25 @@
         switch (selecionado) {
             case 'muito-satisfeito':
                 muitoSatisfeitoContagem.textContent++;
-
+                localStorage.setItem('contagem-muito-satisfeito', muitoSatisfeitoContagem.textContent);
                 break;
+
             case 'satisfeito':
                 satisfeitoContagem.textContent++;
+                localStorage.setItem('contagem-satisfeito', satisfeitoContagem.textContent);
                 break;
             case 'neutro':
                 neutroContagem.textContent++;
+                localStorage.setItem('contagem-neutro', neutroContagem.textContent);
                 break;
             case 'insatisfeito':
                 insatisfeitoContagem.textContent++;
+                localStorage.setItem('contagem-insatisfeito', insatisfeitoContagem.textContent);
+
                 break;
             case 'muito-insatisfeito':
                 muitoInsatisfeitoContagem.textContent++;
+                localStorage.setItem('contagem-muito-insatisfeito', muitoInsatisfeitoContagem.textContent);
                 break;
 }
 });
